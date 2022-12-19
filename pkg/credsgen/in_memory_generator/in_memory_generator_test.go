@@ -27,16 +27,16 @@ var _ = Describe("InMemoryGenerator", func() {
 				Expect(t).To(Equal(defaultGenerator))
 			})
 
-			It("succeeds if the default generator is 2048 bits", func() {
-				Expect(defaultGenerator.(*inmemorygenerator.InMemoryGenerator).Bits).To(Equal(2048))
+			It("succeeds if the default generator is 4096 bits", func() {
+				Expect(defaultGenerator.(*inmemorygenerator.InMemoryGenerator).Bits).To(Equal(4096))
 			})
 
 			It("succeeds if the default generator is rsa", func() {
 				Expect(defaultGenerator.(*inmemorygenerator.InMemoryGenerator).Algorithm).To(Equal("rsa"))
 			})
 
-			It("succeeds if the default generator certs expires in 365 days", func() {
-				Expect(defaultGenerator.(*inmemorygenerator.InMemoryGenerator).Expiry).To(Equal(365))
+			It("succeeds if the default generator certs expires in 1095 days", func() {
+				Expect(defaultGenerator.(*inmemorygenerator.InMemoryGenerator).Expiry).To(Equal(1095))
 			})
 		})
 	})
