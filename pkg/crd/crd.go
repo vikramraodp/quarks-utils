@@ -66,6 +66,11 @@ func (b *Builder) Build() *Builder {
 					Name:    b.groupVersion.Version,
 					Served:  true,
 					Storage: true,
+					Schema:  b.validation,
+					Subresources: &extv1.CustomResourceSubresources{
+						Status: &extv1.CustomResourceSubresourceStatus{},
+					},
+					AdditionalPrinterColumns: b.additionalPrinterColumns,
 				},
 			},
 		},
